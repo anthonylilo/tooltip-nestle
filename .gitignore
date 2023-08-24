@@ -1,0 +1,12 @@
+# Ignore everything
+/*
+
+# But not these files...
+!.gitignore
+!glossaryTooltipController.php
+!glossaryTooltip.info.yml
+!glossaryTooltip.routing.yml
+# etc...
+
+# ...even if they are in subdirectories
+!/modules/
