@@ -1,0 +1,7 @@
+glossaryTooltip:
+  path: '/glossary_tooltip'
+  defaults:
+    _controller: 'Drupal\glossary\Controller\GlossaryTooltipController::GlossaryTooltipController'
+    _title: 'Glossary Tooltip'
+    requirements:
+      _permission: 'access content'

@@ -1,0 +1,7 @@
+name: Glossary Tooltip
+type: module
+description: 'Glossary Tooltip for Nestle'
+package: Glossary Tooltip
+version: 1.0
+core_version_requirement: ^8 || ^9
+core: 8.x
