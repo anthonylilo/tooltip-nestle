@@ -1,0 +1,14 @@
+glossary.api_config_page:
+  path: '/glossary-config'
+  defaults:
+    _form: '\Drupal\glossary_tooltip\Form\GlossaryTooltipAPI'
+    _title: 'Glossary Tooltip for Nestle'
+  requirements:
+    _permission: 'access content'
+glossary.listing:
+  path: '/glossary-list'
+  defaults:
+    _controller: '\Drupal\glossary_tooltip\Controller\GlossaryTooltip::view'
+    _title: 'Glossary Tooltip for Nestle'
+  requirements:
+    _permission: 'access content'

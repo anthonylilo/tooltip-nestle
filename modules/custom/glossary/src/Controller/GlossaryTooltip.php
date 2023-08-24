@@ -16,12 +16,20 @@ Optional:
   1.	Create install function that will create the vocabulary on module install
   2.	 Limit the description on the page up to 100 chars, if the description is longer add “Read more” button that will lead user to the term page itself.
 */
-namespace Drupal\glossary\Controller;
 
-class GlossaryTooltipController {
-  public function GlossaryTipIndex() {
-    return [
-      '#markup' => 'Hello world from custom module',
+namespace Drupal\glossary_tooltip\Controller;
+
+use Drupal\Core\Controller\ControllerBase;
+
+class GlossaryTooltip extends ControllerBase{
+  public function view() {
+    $content = [];
+
+    $content['name'] = "My name is Ben";
+
+    return[
+      '#theme' => 'glossary-listing',
+      '#content' => $content,
     ];
   }
 }

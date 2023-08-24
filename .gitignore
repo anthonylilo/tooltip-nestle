@@ -3,9 +3,6 @@
 
 # But not these files...
 !.gitignore
-!custom_glossary_tooltip.php
-!custom_glossary_tooltip.info.yml
-!custom_glossary_tooltip.routing.yml
 # etc...
 
 # ...even if they are in subdirectories
