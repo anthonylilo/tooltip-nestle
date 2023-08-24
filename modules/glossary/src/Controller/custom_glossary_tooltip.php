@@ -20,7 +20,8 @@ namespace Drupal\glossary\Controller;
 
 class GlossaryTooltipController {
   public function GlossaryTipIndex() {
-    $element = array('#markup' => 'Glossary Tooltip');
-    return $element;
+    return [
+      '#markup' => 'Hello world from custom module',
+    ];
   }
 }

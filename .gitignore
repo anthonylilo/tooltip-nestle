@@ -3,9 +3,9 @@
 
 # But not these files...
 !.gitignore
-!glossaryTooltipController.php
-!glossaryTooltip.info.yml
-!glossaryTooltip.routing.yml
+!custom_glossary_tooltip.php
+!custom_glossary_tooltip.info.yml
+!custom_glossary_tooltip.routing.yml
 # etc...
 
 # ...even if they are in subdirectories

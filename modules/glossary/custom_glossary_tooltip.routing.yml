@@ -1,0 +1,7 @@
+glossary.page:
+  path: '/glossary'
+  defaults:
+    _controller: 'Drupal\glossary\Controller\GlossaryTooltipController::GlossaryTipIndex'
+    _title: 'Glossary Tooltip for Nestle'
+    requirements:
+      _permission: 'access content'
