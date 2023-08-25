@@ -8,6 +8,6 @@ This is a small explanation about what I did in the backend test.
 After that we can move on to the next step.
 
 ##Install the glossary_tooltip:
-* 
+![foto module](https://photos.app.goo.gl/DV9Q1NJyRRXxouPe9)
 
 
