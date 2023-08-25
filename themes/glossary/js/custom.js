@@ -5,44 +5,41 @@
         $.ajax({
           url: "http://localhost/paginas/nestle/get-glossary",
           success: function (data) {
-            /*selecciona el texto del dom y lo separa en un array*/
             const wordsInDocument = $(".layout-content").text().split(/\s+/);
-            //saco los titles y los meto en un array
             const titles = data.map((entry) => entry.title);
-            /* selecciona los elementos de documentWords que coincidan con los
-            elementos de compareArray y retorna el resultado */
             const filterMatchingWords = (compareArray, documentWords) => {
               let result = [];
               compareArray.forEach((entry) => {
                 result.push(
                   documentWords.filter((word) => {
-                    return word.toLowerCase() === entry.toLowerCase();
+                    return (
+                      word.toLowerCase() ===
+                      entry.toLowerCase().replace(".", "")
+                    );
                   })[0]
                 );
               });
               return result;
             };
-            /* se ejecuta la función comparando el array titles contra el array
-            wordsInDocument*/
             const matchingWords = filterMatchingWords(titles, wordsInDocument);
-            /* acá envuelve las palabras del dom que coincidan con el array
-            con la etiqueta <span> y retorna el resultado*/
+            const description = data.map((entry) => entry.description);
+            const id = data.map((entry) => entry.id);
             const placeTooltip = (array, text) => {
               let newText = text;
-              array.forEach((word) => {
-                newText = newText.replace(
-                  new RegExp(`\\b${word}\\b`),
-                  `<div class="tooltip">${word}<span class="tooltiptext">tooltip</span></div>`
-                );
+              array.forEach((word, index) => {
+                const regex = new RegExp(`\\b${word}\\b`);
+                newText = newText.replace(regex, (match) => {
+                  return `<div class="tooltip"><a href="http://localhost/paginas/nestle/glossary-term/${id[index]}">${match}<span class="tooltiptext">${description[index]}</span></a></div>`;
+                });
               });
               return newText;
             };
-            let contenido = $(".layout-content").html();
-            contenido = placeTooltip(matchingWords, contenido);
-            $(".layout-content").html(contenido);
+            let content = $(".layout-content").html();
+            content = placeTooltip(matchingWords, content);
+            $(".layout-content").html(content);
           },
           error: function (xhr, status, error) {
-            console.log("Error en la solicitud AJAX:", error);
+            console.log("Error AJAX:", error);
           },
         });
       });

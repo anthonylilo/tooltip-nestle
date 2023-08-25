@@ -19,3 +19,10 @@ glossary.api:
     _title: 'Get glossary data'
   requirements:
     _permission: 'access content'
+glossary.term:
+  path: '/glossary-term/{id}'
+  defaults:
+    _controller: '\Drupal\glossary_tooltip\Controller\GlossaryTooltip::getById'
+    _title: 'Description of the term'
+  requirements:
+    _permission: 'access content'
