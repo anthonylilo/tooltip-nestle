@@ -8,6 +8,4 @@ This is a small explanation about what I did in the backend test.
 After that we can move on to the next step.
 
 ##Install the glossary_tooltip:
-![foto module](https://photos.app.goo.gl/DV9Q1NJyRRXxouPe9)
-
-
+![extend](https://github.com/anthonylilo/tooltip-nestle/assets/76402507/cd153a85-f1e9-4d28-8926-78fec52da9a6)
