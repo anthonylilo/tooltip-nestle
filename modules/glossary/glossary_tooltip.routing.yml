@@ -5,6 +5,13 @@ glossary.api_config_page:
     _title: 'Glossary Tooltip for Nestle'
   requirements:
     _permission: 'access content'
+glossary.add_glossary_item:
+  path: '/add-glossary'
+  defaults:
+    _form: '\Drupal\glossary_tooltip\Form\AddGlossary'
+    _title: 'Add a glossary Tooltip'
+  requirements:
+    _permission: 'access content'
 glossary.listing:
   path: '/glossary-list'
   defaults:
