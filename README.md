@@ -12,7 +12,7 @@ This is a small explanation about what I did in the backend test.
 After that we can move on to the next step.
 
 ---
-##Install the Glossary Tooltip:
+## Install the Glossary Tooltip:
 ![extend](https://github.com/anthonylilo/tooltip-nestle/assets/76402507/cd153a85-f1e9-4d28-8926-78fec52da9a6)
 
 We have to look in the *Extend* navigation bar, which is the page where we can install the *Glossary Tooltip* module. Click on install and wait for the *success* message and to see if everything works, put in the browser path "/add-glossary".
