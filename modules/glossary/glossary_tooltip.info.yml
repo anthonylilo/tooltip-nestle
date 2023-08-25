@@ -1,6 +1,6 @@
 name: Glossary Tooltip
 description: 'The words correspondent / identical to the items included in the glossary vocabulary are highlighted'
-package: CustomModulse
+package: CustomModules
 
 type: module
 version: 1.0
