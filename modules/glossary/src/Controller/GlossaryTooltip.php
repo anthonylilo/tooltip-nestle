@@ -23,13 +23,27 @@ use Drupal\Core\Controller\ControllerBase;
 
 class GlossaryTooltip extends ControllerBase{
   public function view() {
-    $content = [];
+    $query = \Drupal::database();
+    $results = $query->select('glossary_tooltip', 'g')
+      ->fields('g', ['id','title','description'])
+      ->execute()->fetchAll(\PDO::FETCH_OBJ);
 
-    $content['name'] = "My name is Ben";
+    $contentResult = [];
 
-    return[
-      '#theme' => 'glossary-listing',
-      '#content' => $content,
-    ];
+    if(!empty($results)){
+      foreach($results as $result){
+        $content = [
+          'id' => $result->id,
+          'title' => $result->title,
+          'description' => $result->description
+        ];
+
+        $contentResult[] = [
+          '#theme' => 'glossary-listing',
+          '#content' => $content,
+        ];
+      }
+    }
+    return $contentResult;
   }
 }

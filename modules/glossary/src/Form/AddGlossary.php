@@ -6,10 +6,8 @@ use Drupal\Core\Form\FormBase;
 use Drupal\Core\Form\FormStateInterface;
 
 class AddGlossary extends FormBase{
-  const GLOSSARY_API_CONFIG_PAGE = 'glossary_api_config_page:values';
-
   public function getFormId(){
-    return 'glossary_api_config_page';
+    return 'glossary_tooltip_add_glossary';
   }
 
   public function buildForm(array $form, FormStateInterface $form_state){
