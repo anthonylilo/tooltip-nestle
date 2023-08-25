@@ -26,6 +26,7 @@ body {
 .tooltip a {
   text-decoration: none;
   color: #575859;
+  font-weight: 400;
   background-color: #e7f2f2;
 }
 
@@ -62,4 +63,9 @@ body {
   top: -2.5rem;
   visibility: visible;
   opacity: 1;
+}
+
+.read-more{
+  color: #000;
+  font-weight: 700;
 }

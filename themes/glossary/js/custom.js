@@ -29,7 +29,17 @@
               array.forEach((word, index) => {
                 const regex = new RegExp(`\\b${word}\\b`);
                 newText = newText.replace(regex, (match) => {
-                  return `<div class="tooltip"><a href="http://localhost/paginas/nestle/glossary-term/${id[index]}">${match}<span class="tooltiptext">${description[index]}</span></a></div>`;
+                  const descriptionText = description[index];
+                  let tooltipContent = descriptionText;
+
+                  if (descriptionText.length > 100) {
+                    tooltipContent =
+                      descriptionText.substring(0, 100) +
+                      ' <span class="read-more">' +
+                      "Read more</span>";
+                  }
+
+                  return `<div class="tooltip"><a href="http://localhost/paginas/nestle/glossary-term/${id[index]}">${match}<span class="tooltiptext">${tooltipContent}</span></a></div>`;
                 });
               });
               return newText;
