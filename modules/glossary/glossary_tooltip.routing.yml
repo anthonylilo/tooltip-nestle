@@ -12,3 +12,10 @@ glossary.listing:
     _title: 'Glossary Tooltip for Nestle'
   requirements:
     _permission: 'access content'
+glossary.api:
+  path: '/get-glossary'
+  defaults:
+    _controller: '\Drupal\glossary_tooltip\Controller\GlossaryTooltip::getDataUrl'
+    _title: 'Get glossary data'
+  requirements:
+    _permission: 'access content'

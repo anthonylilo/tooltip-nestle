@@ -20,6 +20,7 @@ Optional:
 namespace Drupal\glossary_tooltip\Controller;
 
 use Drupal\Core\Controller\ControllerBase;
+use Symfony\Component\HttpFoundation\JsonResponse;
 
 class GlossaryTooltip extends ControllerBase{
   public function view() {
@@ -45,5 +46,24 @@ class GlossaryTooltip extends ControllerBase{
       }
     }
     return $contentResult;
+  }
+
+  public function getDataUrl() {
+    $query = \Drupal::database();
+    $results = $query->select('glossary_tooltip', 'g')
+      ->fields('g', ['title','description'])
+      ->execute()->fetchAll(\PDO::FETCH_OBJ);
+
+    $content = [];
+
+    if(!empty($results)){
+      foreach($results as $result){
+        $content[] = [
+          'title' => $result->title,
+          'description' => $result->description
+        ];
+      }
+    }
+    return new JsonResponse($content);
   }
 }
