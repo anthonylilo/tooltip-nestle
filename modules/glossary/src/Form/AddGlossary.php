@@ -15,15 +15,13 @@ class AddGlossary extends FormBase{
 
     $form['title'] = [
       '#type' => 'textfield',
-      '#title' => $this->t('Title (Glossary)'),
-      '#description' => $this->t('This is the title of the glossary'),
+      '#title' => $this->t('<h3>Title (Glossary)</h3>'),
       '#required' => TRUE,
     ];
 
     $form['description'] = [
       '#type' => 'textarea',
-      '#title' => $this->t('Description (Glossary)'),
-      '#description' => $this->t('This is the description of the glossary'),
+      '#title' => $this->t('<h3>Description (Glossary)</h3>'),
       '#required' => TRUE,
     ];
 
