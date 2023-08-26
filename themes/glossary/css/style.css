@@ -87,7 +87,6 @@ body {
   position: relative;
   display: inline-block;
   border-bottom: 1px solid #5ea6a5;
-  text-decoration: none;
 }
 
 .tooltip a {
