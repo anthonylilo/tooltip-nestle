@@ -1,4 +1,4 @@
-# tooltip-nestle
+# Tooltip-nestle
 This is a small explanation about what I did in the backend test.
 
 *I used PHP V.7.4.33*
@@ -37,6 +37,8 @@ In this module we have 4 routes:
 3. /get-glossary
 4. /glossary-term/{id}
 
+Note: *get-glossary* return a json answer for the js file.
+
 To see if everything works  let's create our first term! Go to "/add-glossary" and create a term. This is what the page looks like.
 ![form-glossary](https://github.com/anthonylilo/tooltip-nestle/assets/76402507/64a6a7c4-cb9d-4e41-a3d3-5a9d64613711)
 
@@ -51,3 +53,12 @@ Now click on *Content* in the navigation bar to create the post, when the page r
 ![image](https://github.com/anthonylilo/tooltip-nestle/assets/76402507/1e5517e1-4f2f-4991-9785-73f2a4809efc)
 
 I created Julio Verne post, let's see it!
+![image](https://github.com/anthonylilo/tooltip-nestle/assets/76402507/c223dfd8-ec08-4915-9ef6-762b49716ea1)
+
+And as we can see, the word *dramaturgo* is highlighted if you put your mouse over the word, a tooltip will appear.
+![image](https://github.com/anthonylilo/tooltip-nestle/assets/76402507/87d47374-e3ff-4337-8c08-de7d147e4269)
+
+When the description is longer than 100 characters, you can click on them and go the description term page.
+![image](https://github.com/anthonylilo/tooltip-nestle/assets/76402507/ecaffb5c-2175-4c31-964f-f79ac0947cd5)
+
+When is has lees than 100 characters, you can l in the same way you can click on the highlighted word and go the description term page.
