@@ -1,9 +1,12 @@
 jQuery(document).ready(function ($) {
+  // Make an AJAX request to get the glossary data
   $.ajax({
     url: "http://localhost/paginas/nestle/get-glossary",
     success: function (data) {
+      // Split the words in the document
       const wordsInDocument = $("#block-glossary-content").text().split(/\s+/);
 
+      // Filter the matching words from the glossary data
       const filterMatchingWords = (compareArray, documentWords) => {
         let result = [];
         compareArray.forEach((entry) => {
@@ -17,8 +20,10 @@ jQuery(document).ready(function ($) {
         return result;
       };
 
+      // Get the matching words from the glossary data
       const matchingWords = filterMatchingWords(data, wordsInDocument);
 
+      // Place tooltips for the matching words in the document
       const placeTooltip = (array, text) => {
         const openTag = '<div class="tooltip">';
         const closeTag = "</div>";
@@ -69,11 +74,15 @@ jQuery(document).ready(function ($) {
         return result;
       };
 
+      // Get the content of the glossary block
       let content = $("#block-glossary-content").html();
+      // Place tooltips in the content
       content = placeTooltip(matchingWords, content);
+      // Update the content of the glossary block
       $("#block-glossary-content").html(content);
     },
     error: function (xhr, status, error) {
+      // Log any AJAX errors
       console.log("Error AJAX:", error);
     },
   });
