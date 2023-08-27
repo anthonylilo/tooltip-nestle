@@ -45,7 +45,7 @@ class AddGlossary extends FormBase{
   }
 
   public function submitForm(array &$form, FormStateInterface $form_state){
-    \Drupal::messenger()->addMessage("Glossary saved successfully");
+    \Drupal::messenger()->addMessage("Term saved successfully");
     $values = $form_state->cleanValues()->getValues();
     \Drupal::database()->insert('glossary_tooltip')->fields([
       'title' => $values['title'],

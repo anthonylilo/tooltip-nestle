@@ -2,14 +2,14 @@ glossary.add_glossary_item:
   path: '/add-glossary'
   defaults:
     _form: '\Drupal\glossary_tooltip\Form\AddGlossary'
-    _title: 'Add a glossary Tooltip'
+    _title: 'Add a term to the glossary tooltip'
   requirements:
     _permission: 'access content'
 glossary.listing:
   path: '/glossary-list'
   defaults:
     _controller: '\Drupal\glossary_tooltip\Controller\GlossaryTooltip::view'
-    _title: 'Glossary Tooltip for Nestle'
+    _title: 'List of term in the glossary Tooltip for Nestle'
   requirements:
     _permission: 'access content'
 glossary.api:
