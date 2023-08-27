@@ -23,10 +23,13 @@ body {
   text-transform: uppercase;
 }
 
-.visually-hidden {
-  color: green;
-  font-size: 3rem;
+/* Adding styles for drupal messages */
+div[data-drupal-messages] {
+  text-align: center;
+  font-size: 40px;
+  padding: 10px;
   font-weight: bold;
+  color: #0ddf3a;
 }
 
 .layout-content {
@@ -98,40 +101,37 @@ body {
 
 .tooltip .tooltiptext {
   visibility: hidden;
-  top: 100%;
-  left: 0%;
-  margin-left: -5px;
   width: 250px;
   background-color: #0d7978;
+  box-shadow: -3px 5px 10px 0px #000;
   color: #fff;
-  font-size: 1rem;
   text-align: center;
   border-radius: 6px;
-  padding: 5px 0;
-
-  /* Position the tooltip */
+  padding: 10px;
   position: absolute;
   z-index: 1;
-  transition: opacity 0.5s ease;
+  bottom: 150%;
+  left: -3.1rem;
+  margin-left: -60px;
 }
 
-.tooltiptext::before {
+.tooltip .tooltiptext::after {
   content: "";
   position: absolute;
-  left: 14%;
   top: 100%;
-  transform: translateX(-50%);
-  border: 10px solid;
-  border-color: #0d7978 #0000 #0000 #0000;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #0d7978 transparent transparent transparent;
 }
 
 .tooltip:hover .tooltiptext {
-  top: -2.5rem;
   visibility: visible;
-  opacity: 1;
 }
 
 .read-more {
-  color: #000;
   font-weight: 700;
+  white-space: pre;
+  margin-right: 60%;
 }

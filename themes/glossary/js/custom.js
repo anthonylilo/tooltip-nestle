@@ -31,7 +31,7 @@ jQuery(document).ready(function ($) {
           const tooltipContent =
             item.description.length > 100
               ? item.description.substring(0, 100) +
-                " <span class='read-more'>Read more...</span>"
+                "... <span class='read-more'>Read more &#128072;</span>"
               : item.description;
 
           let match;
