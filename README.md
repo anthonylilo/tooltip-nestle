@@ -39,7 +39,7 @@ The module have 4 routes:
 
 Note: *get-glossary* return a json answer for the js file.
 
-To see if everything works  let's create our first term! Go to "/add-glossary" and create a term. This is what the page looks like.
+To see if everything works,  let's create our first term! Go to "/add-glossary" and create a term. This is what the page looks like.
 ![form-glossary](https://github.com/anthonylilo/tooltip-nestle/assets/76402507/64a6a7c4-cb9d-4e41-a3d3-5a9d64613711)
 
 Fill in the form with the title and its description. When you see the *success* message we will see the term creating in "/glossary-list"
@@ -48,9 +48,11 @@ Fill in the form with the title and its description. When you see the *success* 
 In my case I created the definition of "Dramaturgo".
 
 ## Create a post
-Now click on *Content* in the navigation bar to create the post, when the page reloads the content you have to see this button and you have to click on "+ Add Content"
+Now click on *Content* in the navigation bar to create the post. When the page reloads the content, you have to see this button and you have to click on "+ Add Content"
 
 ![image](https://github.com/anthonylilo/tooltip-nestle/assets/76402507/1e5517e1-4f2f-4991-9785-73f2a4809efc)
+
+Make your publication on any topic, but remember to put even 1 word saved in our terms so that you can verify the operation ;)
 
 I created Julio Verne post, let's see it!
 ![image](https://github.com/anthonylilo/tooltip-nestle/assets/76402507/c223dfd8-ec08-4915-9ef6-762b49716ea1)
@@ -61,4 +63,4 @@ And as you can see, the word *dramaturgo* is highlighted if you put your mouse o
 When the description is longer than 100 characters, you can click on them and go the description term page.
 ![image](https://github.com/anthonylilo/tooltip-nestle/assets/76402507/ecaffb5c-2175-4c31-964f-f79ac0947cd5)
 
-When is has lees than 100 characters, you can l in the same way you can click on the highlighted word and go the description term page.
+When it's less than 100 characters, you can still click on the highlighted word and go to the term's description page.
