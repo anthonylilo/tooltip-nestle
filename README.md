@@ -1,9 +1,9 @@
 # Tooltip-nestle
 This is a small explanation about what I did in the backend test.
 
-*I used PHP V.7.4.33*
-*Jquery 3.0 offered by Drupal*
-*Drupal 9.0.0*
+* *PHP V.7.4.33*
+* *Jquery 3.0 offered by Drupal*
+* *Drupal 9.0.0*
 
 ## What is the order of the folders:
 * Add the *modules/glossary* folder to your modules path.
